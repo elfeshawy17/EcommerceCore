@@ -74,6 +74,11 @@ classDiagram
     Product <|-- PhysicalProduct
     Product <|-- DigitalProduct
     Product <|-- PerishableProduct
+    Product <|-- PerishableDigitalProduct
+    Expirable <|.. PerishableProduct
+    Expirable <|.. PerishableDigitalProduct
+    Shippable <|.. PhysicalProduct
+    Shippable <|.. PerishableProduct
     Customer "1" -- "1" Cart
     Cart "1" -- "*" CartItem
     CartItem "*" -- "1" Product
